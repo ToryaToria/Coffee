@@ -1,23 +1,45 @@
 /* ===================== шрифты. подключение =============== */
-// @font-face {
-//   font-family: "Manrope";
-//   font-style: normal;
-//   font-weight: 500;
-//   src:
-//     url("../../fonts/man/Manrope-Medium.woff2") format("woff2"),
-//     url("../../fonts/man/Manrope-Medium.woff") format("woff");
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("../../fonts/Inter-Regular.woff2") format("woff2"),
+    url("../../fonts/Inter-Regular.woff") format("woff");
 
-//   font-display: swap;
-// }
+  font-display: swap;
+}
 
-// @font-face {
-//   font-family: "Manrope";
-//   font-style: normal;
-//   font-weight: 700;
-//   src:
-//     url("../../fonts/man/Manrope-SemiBold.woff2") format("woff2"),
-//     url("../../fonts/man/Manrope-SemiBold.woff") format("woff");
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  src:
+    url("../../fonts/Inter-Italic.woff2") format("woff2"),
+    url("../../fonts/Inter-Italic.woff") format("woff");
 
-//   font-display: swap;
-// }
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url("../../fonts/Inter-SemiBold.woff2") format("woff2"),
+    url("../../fonts/Inter-SemiBold.woff") format("woff");
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 600;
+  src:
+    url("../../fonts/Inter-SemiBoldItalic.woff2") format("woff2"),
+    url("../../fonts/Inter-SemiBoldItalic.woff") format("woff");
+
+  font-display: swap;
+}
 
