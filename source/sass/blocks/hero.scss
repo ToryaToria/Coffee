@@ -1,0 +1,23 @@
+.hero {
+  margin-bottom: 100px;
+}
+
+.hero__container {
+background-color: $color-bg-container;
+background-image: url(../../img/hero/hero-1x.webp);
+border-radius: $block-radius;
+padding: 60px 16px;
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.hero__title {
+margin-bottom: 40px;
+}
+
+.hero__text {
+  margin-bottom: 40px;
+  color: $color-invert;
+}

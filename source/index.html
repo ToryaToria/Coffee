@@ -22,10 +22,10 @@
 
 <body class="page__body text-base">
   <header class="header">
-    <div class="container">
-      <img class="header__logo" src="./img/logo.svg" alt="logo" width="100" height="60">
+    <div class="header__container container">
+      <img class="header__logo" src="./img/logo/logo.svg" alt="logo" width="100" height="60">
 
-      <nav class="header__nav nav header__nav--open" aria-label="основная навигация сайта">
+      <nav class="header__nav header__nav--open" aria-label="основная навигация сайта">
         <ul class="header__list nav__list">
           <li class="nav__item">
             <a class="nav__link text-nav" href="#favorite">
@@ -53,29 +53,30 @@
         </ul>
       </nav>
 
-      <div class="header__wrapper-btn">
-        <button class="header__btn-light btn-menu" type="button">
-          <span class="visually-hidden">Light</span>
-        </button>
+      <div class="header__wrapper-btns">
+        <div class="header__topic">
+          <button class="header__btn header__btn--light" type="button">
+            <span class="visually-hidden">Light</span>
+          </button>
 
-        <button class="header__btn-dark btn-menu" type="button">
-          <span class="visually-hidden">Dark</span>
+          <button class="header__btn header__btn--dark" type="button">
+            <span class="visually-hidden">Dark</span>
+          </button>
+        </div>
+
+        <button class="header__burger" type="button">
+          <span class="visually-hidden">Menu</span>
         </button>
       </div>
-
-
-      <button class="header__burger" type="button">
-        <span class="visually-hidden">Menu</span>
-      </button>
     </div>
   </header>
 
   <main class="page__main">
-    <section class="hero">
-      <div class="hero__container container">
+    <section class="hero container">
+      <div class="hero__container ">
         <h1 class="visually-hidden">Coffee House Resource</h1>
         <p class="hero__title title-hero">
-          Enjoy premium coffee at our charming cafe
+          <span class="title-hero--assent">Enjoy</span> premium coffee at our charming cafe
         </p>
 
         <p class="hero__text text-base">
@@ -84,7 +85,7 @@
         </p>
 
         <button class="header__btn button" type="button">
-          <span class="visually-hidden">Menu</span>
+          <span class="text-base">Menu</span>
         </button>
       </div>
     </section>
@@ -92,15 +93,15 @@
     <section class="favorite" id="favorite">
       <div class="container">
         <h2 class="favorite__title title-section">
-          Choose your favorite coffee
+          Choose your <span class="title-section--assent">favorite</span> coffee
         </h2>
 
         <div class="favorite__slider slider">
           <ul class="slider__container">
             <li class="slider__card">
-              <img class="slider__img" src="" alt="">
+              <img class="slider__img" src="" alt="" width="348" height="348">
 
-              <h3 class="slider__title card-title">
+              <h3 class="slider__title title-card">
                 S’mores Frappuccino
               </h3>
 
@@ -113,10 +114,10 @@
               </p>
             </li>
 
-            <li class="slider__card">
+            <li class="slider__card visually-hidden">
               <img class="slider__img" src="" alt="">
 
-              <h3 class="slider__title card-title">
+              <h3 class="slider__title title-card">
                 Caramel Macchiato
               </h3>
 
@@ -129,10 +130,10 @@
               </p>
             </li>
 
-            <li class="slider__card">
+            <li class="slider__card visually-hidden">
               <img class="slider__img" src="" alt="">
 
-              <h3 class="slider__title card-title">
+              <h3 class="slider__title title-card">
                 Ice coffee
               </h3>
 
@@ -150,11 +151,11 @@
               <span class="visually-hidden">1</span>
             </button>
 
-            <button class="slider__pagination" type="button">
+            <button class="slider__pagination" type="button" disabled>
               <span class="visually-hidden">2</span>
             </button>
 
-            <button class="slider__pagination" type="button">
+            <button class="slider__pagination" type="button" disabled>
               <span class="visually-hidden">3</span>
             </button>
           </div>
@@ -165,17 +166,18 @@
     <section class="about" id="about">
       <div class="container">
         <h2 class="about__title title-section">
-          Resource is the perfect and cozy place where you can enjoy a variety of hot beverages, relax, catch up with
+          Resource is <span class="title-section--assent">the perfect and cozy place</span> where you can enjoy a
+          variety of hot beverages, relax, catch up with
           friends, or get some work done.
         </h2>
 
         <div class="about__wrapper-imgs">
           <div class="about__img">
-            <img src="" alt="">
+            <img src="./img/about/about-1-1x.webp" alt="" width="348" height="590">
           </div>
 
           <div class="about__img">
-            <img src="" alt="">
+            <img src="./img/about/about-4-1x.webp" alt="" width="348" height="590">
           </div>
 
           <div class="about__img visually-hidden">
@@ -193,10 +195,10 @@
       <div class="container">
         <div class="application__content">
           <h2 class="application__title title-section">
-            Download our app <br>
+            <span class="title-section--assent">Download</span> our app <br>
             to start ordering
           </h2>
-          <p>
+          <p class="application__text text-base">
             Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever
             you
             are
@@ -204,9 +206,9 @@
 
           <div class="application__wrapper-btn">
             <button class="application__btn button app" type="button">
-              <img class="app__img" src="" alt="">
+              <img class="app__img" src="" alt="" width="36" height="36">
               <div class="app__wraper">
-                <p class="app__text text-mini">
+                <p class="app__text text-caption">
                   Available on the
                 </p>
                 <p class="app__type text-medium">
@@ -216,9 +218,9 @@
             </button>
 
             <button class="application__btn button app" type="button">
-              <img class="app__img" src="" alt="">
+              <img class="app__img" src="" alt="" width="36" height="36">
               <div class="app__wraper">
-                <p class="app__text text-mini">
+                <p class="app__text text-caption">
                   Available on
                 </p>
                 <p class="app__type text-medium">
@@ -228,53 +230,56 @@
             </button>
           </div>
 
-          <img src="" alt="">
+          <img src="./img/app/mobile-screens-1x.webp" alt="" width="348" height="348">
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer__container container">
+  <footer class="footer container">
+    <div class="footer__container">
       <div class="footer__wrapper">
-        <h2 class="footer__title title-section">
-          Sip, Savor, Smile. It’s coffee time!
+        <h2 class="footer__title title-section title-section--invert">
+          Sip, Savor, Smile.<br>
+          <span class="title-section--assent">
+            It’s coffee time!
+          </span>
         </h2>
 
-        <ul class=" footer__socials">
+        <ul class="footer__socials">
           <li class="footer__social-item">
-            <a class="footer__social-linc" href="">
+            <a class="footer__social-link" href="">
               <span class="visually-hidden">twitter</span>
             </a>
           </li>
 
           <li class="footer__social-item">
-            <a class="footer__social-linc" href="">
+            <a class="footer__social-link" href="">
               <span class="visually-hidden">instagram</span>
 
             </a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-linc" href="">
+            <a class="footer__social-link" href="">
               <span class="visually-hidden">facebook</span>
             </a>
           </li>
         </ul>
 
         <div class="footer__wrapper-contacts" id="contact">
-          <h4 class="footer__contacts text-medium">
+          <h4 class="footer__contacts title-card">
             Contact us
           </h4>
 
-          <p class="footer__contact footer__contact--address text-bold">
+          <p class="footer__contact footer__contact--address text-medium">
             8558 Green Rd., LA
           </p>
 
-          <a class="footer__contact footer__contact--tel text-bold" href="">
+          <a class="footer__contact footer__contact--tel text-medium" href="">
             +1 (603) 555-0123
           </a>
 
-          <p class="footer__contact footer__contact--schedule text-bold">
+          <p class="footer__contact footer__contact--schedule text-medium">
             Mon–Sat: 9:00–23:00
           </p>
         </div>

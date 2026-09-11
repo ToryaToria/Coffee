@@ -1,0 +1,51 @@
+.footer {
+  margin-bottom: 40px;
+}
+
+.footer__container {
+  padding: 60px 16px 44px 16px;
+  background-color: $color-bg-container;
+  border-radius: $block-radius;
+}
+
+.footer__title {
+  margin-bottom: 40px;
+}
+
+.footer__socials {
+  @include list-reset;
+
+  margin-bottom: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.footer__social-link {
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  border: 1px solid $color-line;
+  border-radius: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__contacts {
+  color: $color-invert;
+  margin-bottom: 40px;
+}
+
+.footer__contact {
+  color: $color-invert;
+  margin-bottom: 16px;
+}
+
+.footer__contact--tel {
+  display: block;
+  text-decoration: none;
+}

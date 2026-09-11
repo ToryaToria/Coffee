@@ -1,0 +1,50 @@
+.slider__container {
+  @include list-reset;
+}
+
+.slider__card {
+  text-align: center;
+
+   margin-bottom: 40px;
+
+}
+
+.slider__img {
+ width: 348px;
+ height: 348px;
+
+ margin-bottom: 20px;
+}
+
+.slider__title {
+  margin-bottom: 16px;
+}
+
+.slider__text {
+    margin-bottom: 16px;
+}
+
+.slider__price {
+  @include font($size: 24px, $line-height: 125%, $weight: 600);
+}
+
+.slider__paginations {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+}
+
+.slider__pagination {
+@include btn-reset;
+background-color: $color-bg;
+width: 40px;
+height: 4px;
+border-radius: $btn-radius;
+background-color: $color-bg-container;
+
+&:disabled {
+  background-color: $color-disabled;
+}
+}
+

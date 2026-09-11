@@ -2,14 +2,20 @@
 
 $font-base: "Inter", arial, sans-serif;
 
+// BORDER-RADIUS
+
+$btn-radius: 100px;
+$block-radius: 40px;
+
+
 // COLORS
 $color-black: #000000;
 $color-white: #ffffff;
 
 // -------
 $color-text: #403f39;
-$color-text-invert: #e1d4c9;
-$color-text-accent: #b0907a;
+$color-invert: #e1d4c9;
+$color-accent: #b0907a;
 
 $color-bg: #e1d4c9;
 $color-bg-dark: #292826;
@@ -29,7 +35,7 @@ $color-line-invert: #665f55;
 // $color-overlay-bg: rgba(13, 29, 51, 0.4);
 
 // -------
-$color-disabled: #a9afb7;
+$color-disabled: #c1b6ad;
 $color-error: #ff5e66;
 
 // // WIDTH

@@ -1,7 +1,7 @@
-@mixin font($family: $font-base, $size, $line-height, $weight: 500, $color: $color-text) {
+@mixin font($size, $line-height, $weight: 400, $color: $color-text) {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: $family;
+  font-family: $font-base;
   font-size: $size;
   line-height: $line-height;
   font-weight: $weight;
@@ -23,18 +23,6 @@
 
 @mixin media-desktop {
   @media (min-width: $desktop-width) {
-    @content;
-  }
-}
-
-@mixin desktop-1024 {
-  @media (min-width: $desktop-1024) {
-    @content;
-  }
-}
-
-@mixin desktop-1280 {
-  @media (min-width: $desktop-1280) {
     @content;
   }
 }
