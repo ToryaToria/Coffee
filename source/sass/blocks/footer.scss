@@ -7,10 +7,20 @@
   background-color: $color-bg-container;
   border-radius: $block-radius;
 
-    @include media-tabl {
-      padding: 100px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
-    }
+  @include media-tabl {
+    padding: 100px 60px;
+    gap: 100px;
+  }
+
+  @include media-desktop {
+    padding: 100px;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .footer__title {
@@ -19,8 +29,6 @@
 
 .footer__socials {
   @include list-reset;
-
-  margin-bottom: 100px;
 
   display: flex;
   align-items: center;

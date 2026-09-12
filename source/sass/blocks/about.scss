@@ -12,7 +12,9 @@
   gap: 40px;
 
   @include media-desktop {
+    // flex-direction: row;
     flex-wrap: wrap;
+    height: 1060px;
   }
 }
 
@@ -28,7 +30,22 @@
     background-color: aquamarine;
   }
 
+  @include media-desktop {
+    width: 660px;
+  }
+
+  &--desktop {
+    display: none;
+
+    @include media-desktop {
+      display: block;
+      height: 430px;
+      background-color: antiquewhite;
+    }
+  }
+
   img {
+    display: block;
     width: auto;
     height: inherit;
     // как сместить изображение внутри контейнера?

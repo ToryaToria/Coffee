@@ -3,23 +3,26 @@
 }
 
 .hero__container {
-background-color: $color-bg-container;
-background-image: url(../../img/hero/hero-1x.webp);
-border-radius: $block-radius;
-padding: 60px 16px;
+  background-color: $color-bg-container;
+  background-image: url(../../img/hero/hero-1x.webp);
+  border-radius: $block-radius;
+  padding: 60px 16px;
 
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
- @include media-tabl {
+  @include media-tabl {
     padding: 100px 98px 100px 60px;
+  }
 
-    }
+  @include media-desktop {
+    padding: 100px 730px 100px 100px;
+  }
 }
 
 .hero__title {
-margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .hero__text {

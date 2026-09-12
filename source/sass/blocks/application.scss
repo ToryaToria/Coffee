@@ -11,6 +11,12 @@
   @include media-tabl {
     gap: 100px;
   }
+
+    @include media-desktop {
+      flex-direction: row;
+  align-items: center;
+
+    }
 }
 
 .application__title {

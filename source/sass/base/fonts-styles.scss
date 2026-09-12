@@ -29,9 +29,9 @@
 .title-section {
   @include font($size: 32px, $line-height: 125%, $weight: 600);
 
-   &--invert {
+  &--invert {
     color: $color-invert;
-   }
+  }
 
   &--assent {
     color: $color-accent;
@@ -48,10 +48,15 @@
 }
 
 .text-caption {
-    @include font($size: 10px, $line-height: 140%, $weight: 600);
+  @include font($size: 10px, $line-height: 140%, $weight: 600);
 }
 
 .text-medium {
-    @include font($size: 16px, $line-height: 150%, $weight: 600);
+  @include font($size: 16px, $line-height: 150%, $weight: 600);
 }
 
+.text-nav {
+  @include font($size: 16px, $line-height: 150%, $weight: 600);
+
+  text-decoration: none;
+}

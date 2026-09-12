@@ -11,6 +11,24 @@
 
 .header__nav {
   display: none;
+
+  @include media-desktop {
+    @include list-reset;
+
+    display: block;
+     }
+}
+
+.header__list {
+   @include media-desktop {
+    @include list-reset;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: auto;
+  }
 }
 
 .header__wrapper-btns {
@@ -21,6 +39,10 @@
   @include media-tabl {
     gap: 24px;
   }
+
+     @include media-desktop {
+    margin-left: 44px;
+    }
 }
 
 .header__topic {
