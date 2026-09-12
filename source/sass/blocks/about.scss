@@ -21,4 +21,16 @@
   height: 590px;
   border-radius: $block-radius;
   overflow: hidden;
+
+  @include media-tabl {
+    width: 688px;
+
+    background-color: aquamarine;
+  }
+
+  img {
+    width: auto;
+    height: inherit;
+    // как сместить изображение внутри контейнера?
+  }
 }

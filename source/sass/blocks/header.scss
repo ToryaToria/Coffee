@@ -17,6 +17,10 @@
   display: flex;
   align-items: center;
   gap: 12px;
+
+  @include media-tabl {
+    gap: 24px;
+  }
 }
 
 .header__topic {
@@ -47,7 +51,7 @@
 }
 
 .header__burger {
-   width: 44px;
+  width: 44px;
   height: 44px;
   border: 1px solid $color-line-invert;
   display: flex;

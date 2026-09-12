@@ -2,6 +2,17 @@
   margin-bottom: 100px;
 }
 
+.application__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+
+  @include media-tabl {
+    gap: 100px;
+  }
+}
+
 .application__title {
   margin-bottom: 40px;
 }
@@ -15,6 +26,10 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+
+  @include media-tabl {
+    flex-direction: row;
+  }
 }
 
 .application__btn {
@@ -32,4 +47,15 @@
   @include btn-reset;
   border: 1px solid $color-line-invert;
   border-radius: $btn-radius;
+}
+
+.application__wrapper-img {
+  width: 100%;
+  height: auto;
+  background-color: beige;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }

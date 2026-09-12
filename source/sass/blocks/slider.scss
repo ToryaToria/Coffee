@@ -1,3 +1,9 @@
+.slider {
+   @include media-tabl {
+    position: relative;
+  }
+}
+
 .slider__container {
   @include list-reset;
 }
@@ -5,15 +11,14 @@
 .slider__card {
   text-align: center;
 
-   margin-bottom: 40px;
-
+  margin-bottom: 40px;
 }
 
 .slider__img {
- width: 348px;
- height: 348px;
+  width: 348px;
+  height: 348px;
 
- margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .slider__title {
@@ -21,30 +26,58 @@
 }
 
 .slider__text {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .slider__price {
   @include font($size: 24px, $line-height: 125%, $weight: 600);
 }
 
+.slider__navigations {
+  display: none;
+
+  @include media-tabl {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.slider__nav {
+  @include btn-reset;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid $color-line-invert;
+}
+
 .slider__paginations {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
 .slider__pagination {
-@include btn-reset;
-background-color: $color-bg;
-width: 40px;
-height: 4px;
-border-radius: $btn-radius;
-background-color: $color-bg-container;
+  @include btn-reset;
 
-&:disabled {
-  background-color: $color-disabled;
-}
-}
+  background-color: $color-bg;
+  width: 40px;
+  height: 4px;
+  border-radius: $btn-radius;
+  background-color: $color-bg-container;
 
+  &:disabled {
+    background-color: $color-disabled;
+  }
+}
