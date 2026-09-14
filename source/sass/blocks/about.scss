@@ -9,29 +9,57 @@
 .about__wrapper-imgs {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 40px;
 
-  @include media-desktop {
-    // flex-direction: row;
+    @include media-desktop {
     flex-wrap: wrap;
     height: 1060px;
+    width: 1360px;
+    margin: 0 auto;
   }
 }
 
 .about__img {
-  width: 348px;
+  position: relative;
+
+  width: clamp(348px, 100%, 688px);
   height: 590px;
+
   border-radius: $block-radius;
   overflow: hidden;
 
-  @include media-tabl {
-    width: 688px;
+  img {
+    display: block;
 
-    background-color: aquamarine;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: auto;
+    height: auto;
+
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+  }
+
+  @include media-tabl {
+    &:first-child {
+      align-self: start;
+    }
+
+    &:last-child {
+      align-self: flex-end;
+    }
   }
 
   @include media-desktop {
     width: 660px;
+
+    &:first-child,
+    &:last-child {
+      align-self:inherit;
+    }
   }
 
   &--desktop {
@@ -40,14 +68,6 @@
     @include media-desktop {
       display: block;
       height: 430px;
-      background-color: antiquewhite;
     }
-  }
-
-  img {
-    display: block;
-    width: auto;
-    height: inherit;
-    // как сместить изображение внутри контейнера?
   }
 }
