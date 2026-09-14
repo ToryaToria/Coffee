@@ -46,6 +46,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition:
+    border-color 0.7s ease-out,
+    background-color 0.7s ease-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include focus-visible($bg-color: $color-bg);
+  }
+
+  &:hover {
+    background-color: $color-bg;
+    border-color: $color-bg;
+  }
+
+  &:active {
+    background-color: $color-invert-80;
+  }
 }
 
 .footer__contacts {
@@ -63,6 +84,37 @@
 }
 
 .footer__contact--tel {
-  // display: block;
+  width: fit-content;
   text-decoration: none;
+
+  transition: color 0.7s ease-out;
+
+  position: relative;
+  &::before {
+    @include hover-line;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.7s ease-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include focus-visible;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  &:active {
+    background-color: $color-invert-80;
+  }
 }
+
+// .footer__contact--tel:hover::before {
+//     transform: scaleX(1);
+//   }

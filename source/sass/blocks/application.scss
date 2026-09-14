@@ -53,6 +53,26 @@
   @include btn-reset;
   border: 1px solid $color-line-invert;
   border-radius: $btn-radius;
+
+
+  cursor: pointer;
+  transition: background-color 0.7s ease-out;
+  
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include focus-visible;
+  }
+
+  &:hover {
+    background-color: $color-bg-container;
+  }
+
+  &:active {
+    background-color: $color-bg-container-60;
+  }
 }
 
 .application__wrapper-img {

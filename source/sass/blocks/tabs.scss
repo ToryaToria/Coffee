@@ -9,6 +9,10 @@
   margin-bottom: 40px;
 }
 
+.tabs__text {
+  transition: color 0.7s ease-out;
+}
+
 .tabs__btn {
   @include btn-reset;
   box-sizing: border-box;
@@ -23,6 +27,36 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+
+  cursor: pointer;
+  transition:
+    background-color 0.7s ease-out,
+    border-color 0.7s ease-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include focus-visible;
+  }
+
+  &:hover {
+    background-color: $color-bg-container;
+    border-color: $color-bg-container;
+
+    .tabs__text {
+      color: $color-invert;
+    }
+
+    .tabs__img-wrapper {
+      background-color: $color-invert;
+    }
+  }
+
+  &:active {
+    background-color: $color-bg-container-60;
+  }
 }
 
 .tabs__img-wrapper {
@@ -35,6 +69,9 @@
 
   border-radius: 100%;
   background-color: $color-disabled;
+
+  transition:
+    background-color 0.7s ease-out;
 }
 
 .tabs__item--selected {

@@ -1,20 +1,28 @@
 .nav__link {
   position: relative;
+  width: fit-content;
 
   &::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 1px;
+    @include hover-line;
 
-    bottom: -2px;
-    left: 0;
-    background-color: red;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.7s ease-out;
+  }
+}
+
+.nav__link:focus {
+  outline: none;
+}
+
+.nav__link:focus-visible {
+  @include focus-visible;
   }
 
-  &:hover {
-    &::after {
-      width: 100%;
-    }
-  }
+.nav__link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav__link:active {
+  opacity: 0.7;
 }

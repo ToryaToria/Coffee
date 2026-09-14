@@ -57,6 +57,8 @@
 }
 
 .header__btn {
+  @include btn-reset;
+
   width: 44px;
   height: 44px;
   border: none;
@@ -65,14 +67,38 @@
   justify-content: center;
   border-radius: 100%;
 
-  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.7s ease-out;
 
   &--light {
     background-color: $color-accent;
+
+    &:hover {
+      img {
+        fill: red;
+      }
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include focus-visible($outline: 0);
+  }
+
+  &:hover {
+    background-color: $color-bg-container;
+  }
+
+  &:active {
+    background-color: $color-bg-container-60;
   }
 }
 
 .header__burger {
+  box-sizing: border-box;
   @include btn-reset;
   @include font($size: 10px, $line-height: 140%, $weight: 600);
   text-decoration: none;
@@ -81,35 +107,74 @@
   height: 44px;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  flex-grow: 0;
+  gap: 4px;
 
   border: 1px solid $color-line-invert;
   border-radius: 100%;
 
   background-color: transparent;
 
- &--active {
-      background-color: red;
-    }
+  cursor: pointer;
+  transition: border-color 0.7s ease-out;
 
   @include media-desktop {
-    border: none;
-    gap: 8px;
-    border-radius: 0;
-    width: inherit;
-    height: inherit;
-    align-items: flex-end;
-
-
-    &:hover {
-      text-decoration: underline;
-    }
+    display: none;
   }
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 2px;
+    background-color: $color-bg-container-dark;
+    border-radius: 6px;
+
+    transition: all 0.7s ease-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include focus-visible ($bg-color: $color-accent, $outline: 2px);
+  }
+
+  &:hover {
+    border-color: $color-accent;
+  }
+
+  &:hover::after,
+  &:hover::before {
+    background-color: $color-accent;
+  }
+
+   &:active {
+   border-color: $color-accent-50;
+  }
+
+   &:active::after,
+  &:active::before {
+    background-color: $color-accent-50;
+  }
+
 }
 
-.header__menu-descktop {
+.header__burger--closer::before {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.header__burger--closer::after {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+.header__menu {
   display: none;
 
   @include media-desktop {
@@ -121,3 +186,21 @@
     }
   }
 }
+
+// =======
+// &--active {
+//       background-color: red;
+//     }
+
+//   @include media-desktop {
+//     border: none;
+//     gap: 8px;
+//     border-radius: 0;
+//     width: inherit;
+//     height: inherit;
+//     align-items: flex-end;
+
+//     &:hover {
+//       text-decoration: underline;
+//     }
+//   }
