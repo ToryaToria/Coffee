@@ -25,7 +25,7 @@
     <div class="header__container container">
       <img class="header__logo" src="./img/logo/logo.svg" alt="logo" width="100" height="60">
 
-      <nav class="header__nav header__nav--open" aria-label="основная навигация сайта">
+      <nav class="header__nav header__nav--open nav" aria-label="основная навигация сайта">
         <ul class="header__list nav__list">
           <li class="nav__item">
             <a class="nav__link text-nav" href="#favorite">
@@ -56,17 +56,21 @@
       <div class="header__wrapper-btns">
         <div class="header__topic">
           <button class="header__btn header__btn--light" type="button">
-            <span class="visually-hidden">Light</span>
+            <!-- <span class="visually-hidden">Light</span> -->
+            <img src="./img/icons/sun.svg" alt="Light" width="22px" height="22px">
           </button>
 
           <button class="header__btn header__btn--dark" type="button">
-            <span class="visually-hidden">Dark</span>
+            <!-- <span class="visually-hidden">Dark</span> -->
+            <img src="./img/icons/moon.svg" alt="Dark" width="22px" height="22px">
+
           </button>
         </div>
 
-        <button class="header__burger" type="button">
-          <span class="visually-hidden">Menu</span>
-        </button>
+        <a class="header__burger" href="./menu.html">
+          <span class="header__menu-descktop">Menu</span>
+          <img src="./img/icons/coffee-cup.svg" alt="cup" width="20px" height="20px">
+        </a>
       </div>
     </div>
   </header>
@@ -115,8 +119,7 @@
             </li>
 
             <li class="slider__card visually-hidden">
-              <img class="slider__img" src="" alt="">
-
+              <img class="slider__img" src="./img/slider/coffee-slider-2-1x.webp" alt="" width="348" height="348">
               <h3 class="slider__title title-card">
                 Caramel Macchiato
               </h3>
@@ -131,8 +134,7 @@
             </li>
 
             <li class="slider__card visually-hidden">
-              <img class="slider__img" src="" alt="">
-
+              <img class="slider__img" src="./img/slider/coffee-slider-3-1x.webp" alt="" width="348" height="348">
               <h3 class="slider__title title-card">
                 Ice coffee
               </h3>
@@ -148,11 +150,13 @@
 
           <div class="slider__navigations">
             <button class="slider__nav slider__nav--left" type="button">
-              <span class="visually-hidden">1</span>
+              <!-- <span class="visually-hidden">left</span> -->
+              <img src="./img/icons/arrow-right.svg" alt="left" width="24" height="24">
             </button>
 
             <button class="slider__nav slider__nav--right" type="button" disabled>
-              <span class="visually-hidden">2</span>
+              <!-- <span class="visually-hidden">right</span> -->
+              <img src="./img/icons/arrow-right.svg" alt="right" width="24" height="24">
             </button>
           </div>
 
@@ -216,7 +220,7 @@
 
           <div class="application__wrapper-btn">
             <button class="application__btn button app" type="button">
-              <img class="app__img" src="" alt="" width="36" height="36">
+              <img class="app__img" src="./img/icons/app-store.svg" alt="" width="36" height="36">
               <div class="app__wraper">
                 <p class="app__text text-caption">
                   Available on the
@@ -228,7 +232,7 @@
             </button>
 
             <button class="application__btn button app" type="button">
-              <img class="app__img" src="" alt="" width="36" height="36">
+              <img class="app__img" src="./img/icons/google.svg" alt="Google Play" width="36" height="36">
               <div class="app__wraper">
                 <p class="app__text text-caption">
                   Available on
@@ -261,19 +265,22 @@
         <ul class="footer__socials">
           <li class="footer__social-item">
             <a class="footer__social-link" href="">
-              <span class="visually-hidden">twitter</span>
+              <!-- <span class="visually-hidden">twitter</span> -->
+              <img src="./img/icons/twitter.svg" alt="twitter" width="24" height="24">
             </a>
           </li>
 
           <li class="footer__social-item">
             <a class="footer__social-link" href="">
-              <span class="visually-hidden">instagram</span>
-
+              <!-- <span class="visually-hidden">instagram</span> -->
+              <img src="./img/icons/instagram.svg" alt="instagram" width="24" height="24">
             </a>
           </li>
+
           <li class="footer__social-item">
             <a class="footer__social-link" href="">
-              <span class="visually-hidden">facebook</span>
+              <!-- <span class="visually-hidden">facebook</span> -->
+              <img src="./img/icons/facebook.svg" alt="facebook" width="24" height="24">
             </a>
           </li>
         </ul>
@@ -285,15 +292,15 @@
         </h4>
 
         <p class="footer__contact footer__contact--address text-medium">
-          8558 Green Rd., LA
+          <img src="./img/icons/pin-alt.svg" alt="pin-alt" width="20" height="20"> 8558 Green Rd., LA
         </p>
 
         <a class="footer__contact footer__contact--tel text-medium" href="">
-          +1 (603) 555-0123
+          <img src="./img/icons/phone.svg" alt="phone" width="20" height="20"> +1 (603) 555-0123
         </a>
 
         <p class="footer__contact footer__contact--schedule text-medium">
-          Mon–Sat: 9:00–23:00
+        <img src="./img/icons/clock.svg" alt="clock" width="20" height="20">   Mon–Sat: 9:00–23:00
         </p>
       </div>
 

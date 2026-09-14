@@ -56,9 +56,13 @@
 .footer__contact {
   color: $color-invert;
   margin-bottom: 16px;
+
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
 }
 
 .footer__contact--tel {
-  display: block;
+  // display: block;
   text-decoration: none;
 }

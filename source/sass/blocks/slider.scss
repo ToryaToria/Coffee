@@ -88,3 +88,9 @@
     background-color: $color-disabled;
   }
 }
+
+.slider__nav--left {
+  img {
+    transform: rotate(180deg);
+  }
+}

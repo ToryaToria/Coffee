@@ -1,0 +1,53 @@
+.tabs {
+  @include list-reset;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-bottom: 40px;
+}
+
+.tabs__btn {
+  @include btn-reset;
+  box-sizing: border-box;
+  height: 46px;
+
+  padding: 8px 16px 8px 8px;
+
+  border: 1px solid $color-line;
+  border-radius: $btn-radius;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tabs__img-wrapper {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100%;
+  background-color: $color-disabled;
+}
+
+.tabs__item--selected {
+  .tabs__btn {
+    background-color: $color-bg-container;
+    border: 1px solid $color-bg-container;
+
+    .tabs__text {
+      color: $color-invert;
+    }
+  }
+
+  .tabs__img-wrapper {
+    background-color: $color-invert;
+  }
+}
