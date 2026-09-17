@@ -9,6 +9,27 @@
   justify-content: space-between;
 }
 
+.header__logo-link {
+  display: block;
+  transition: transform 0.7s ease-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include focus-visible($outline: 0);
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    background-color: $color-bg-container-60;
+  }
+}
+
 .header__nav {
   display: none;
 
@@ -176,6 +197,7 @@
 .header__menu {
   display: none;
   text-decoration: none;
+  transition: background-color 0.7s ease-out, color 0.7s ease-out;
 
   @include media-desktop {
     display: block;
@@ -185,6 +207,7 @@
 
       &::after {
         @include hover-line;
+       transition: background-color 0.7s ease-out;
       }
     }
   }

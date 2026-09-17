@@ -23,7 +23,9 @@
 <body class="page__body text-base">
   <header class="header">
     <div class="header__container container">
-      <img class="header__logo" src="./img/logo/logo.svg" alt="logo" width="100" height="60">
+      <a class="header__logo-link" href="./index.html">
+        <img class="header__logo" src="./img/logo/logo.svg" alt="logo" width="100" height="60">
+      </a>
 
       <nav class="header__nav header__nav--open nav" aria-label="основная навигация сайта">
         <ul class="header__list nav__list">
@@ -63,14 +65,17 @@
           <button class="header__btn header__btn--dark" type="button">
             <!-- <span class="visually-hidden">Dark</span> -->
             <img src="./img/icons/moon.svg" alt="Dark" width="22px" height="22px">
-
           </button>
         </div>
+
+        <button class="header__burger" type="button">
+          <span class="visually-hidden">mobaile menu</span>
+        </button>
 
         <a class="header__menu header__menu--active text-nav" href="./index.html">
           <span>Menu</span>
           <img src="./img/icons/coffee-cup.svg" alt="cup" width="20px" height="20px">
-          </a>
+        </a>
       </div>
     </div>
   </header>
