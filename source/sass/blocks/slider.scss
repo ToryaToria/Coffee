@@ -10,7 +10,6 @@
   @include media-desktop {
     margin-left: 104px;
     margin-right: 104px;
-    background-color: azure;
   }
 }
 
@@ -75,7 +74,7 @@
 
   &:focus-visible {
     @include focus-visible($bg-color: $color-accent, $outline: 2px);
-    background-color: red;
+    // background-color: red;
   }
 
   &:hover {

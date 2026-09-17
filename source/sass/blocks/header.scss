@@ -143,7 +143,7 @@
   }
 
   &:focus-visible {
-    @include focus-visible ($bg-color: $color-accent, $outline: 2px);
+    @include focus-visible($bg-color: $color-accent, $outline: 2px);
   }
 
   &:hover {
@@ -155,15 +155,14 @@
     background-color: $color-accent;
   }
 
-   &:active {
-   border-color: $color-accent-50;
+  &:active {
+    border-color: $color-accent-50;
   }
 
-   &:active::after,
+  &:active::after,
   &:active::before {
     background-color: $color-accent-50;
   }
-
 }
 
 .header__burger--closer::before {
@@ -176,31 +175,43 @@
 
 .header__menu {
   display: none;
+  text-decoration: none;
 
   @include media-desktop {
     display: block;
 
     &--active {
-      text-decoration: underline;
-      background-color: red;
+      position: relative;
+
+      &::after {
+        @include hover-line;
+      }
     }
   }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include focus-visible($bg-color: $color-accent, $outline: 4px);
+  }
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+
+  &:hover::before {
+    background-color: $color-accent;
+  }
+
+  &:active {
+    border-color: $color-accent-50;
+    color: $color-accent-50;
+  }
+
+  &:active::before {
+    background-color: $color-accent-50;
+  }
 }
-
-// =======
-// &--active {
-//       background-color: red;
-//     }
-
-//   @include media-desktop {
-//     border: none;
-//     gap: 8px;
-//     border-radius: 0;
-//     width: inherit;
-//     height: inherit;
-//     align-items: flex-end;
-
-//     &:hover {
-//       text-decoration: underline;
-//     }
-//   }
