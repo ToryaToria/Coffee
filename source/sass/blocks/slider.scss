@@ -68,17 +68,33 @@
   cursor: pointer;
   transition: background-color 0.7s ease-out;
 
+  &::after {
+    @include bg-img(
+      $url: url("../../img/icons/arrow-right.svg"),
+      $mask-color: currentColor,
+      $width: 24px,
+      $height: 24px
+    );
+  }
+
+  &--left::after {
+    transform: rotate(180deg);
+  }
+
   &:focus {
     outline: none;
   }
 
   &:focus-visible {
     @include focus-visible($bg-color: $color-accent, $outline: 2px);
-    // background-color: red;
   }
 
   &:hover {
     background-color: $color-bg-container;
+  }
+
+  &:hover::after {
+    background-color: $color-bg;
   }
 }
 
@@ -98,14 +114,14 @@
   border-radius: $btn-radius;
   background-color: $color-bg-container;
 
-cursor: pointer;
+  cursor: pointer;
   transition: background-color 0.7s ease-out;
 
   &:disabled {
     background-color: $color-disabled;
   }
 
-   &:focus {
+  &:focus {
     outline: none;
   }
 
@@ -119,11 +135,5 @@ cursor: pointer;
 
   &:active:not(:disabled) {
     background-color: $color-accent-50;
-  }
-}
-
-.slider__nav--left {
-  img {
-    transform: rotate(180deg);
   }
 }

@@ -51,6 +51,33 @@
     border-color 0.7s ease-out,
     background-color 0.7s ease-out;
 
+  &--twitter::after {
+    @include bg-img(
+      $url: url("../../img/icons/twitter.svg"),
+      $mask-color: $color-bg,
+      $width: 18px,
+      $height: 18px
+    );
+  }
+
+  &--facebook::after {
+    @include bg-img(
+      $url: url("../../img/icons/facebook.svg"),
+      $mask-color: $color-bg,
+      $width: 18px,
+      $height: 18px
+    );
+  }
+
+  &--instagram::after {
+    @include bg-img(
+      $url: url("../../img/icons/instagram.svg"),
+      $mask-color: $color-bg,
+      $width: 18px,
+      $height: 18px
+    );
+  }
+
   &:focus {
     outline: none;
   }
@@ -62,6 +89,10 @@
   &:hover {
     background-color: $color-bg;
     border-color: $color-bg;
+  }
+
+  &:hover::after {
+    background-color: $color-bg-container-dark;
   }
 
   &:active {
@@ -90,6 +121,7 @@
   transition: color 0.7s ease-out;
 
   position: relative;
+
   &::before {
     @include hover-line;
 
@@ -111,10 +143,6 @@
   }
 
   &:active {
-    background-color: $color-invert-80;
+    opacity: 0.7;
   }
 }
-
-// .footer__contact--tel:hover::before {
-//     transform: scaleX(1);
-//   }

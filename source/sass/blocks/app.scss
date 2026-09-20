@@ -1,6 +1,6 @@
 .app__img {
-width: 36px;
-height: 36px;
+  width: 36px;
+  height: 36px;
 }
 
 .app__text {
@@ -9,4 +9,9 @@ height: 36px;
 
 .app__wraper {
   text-align: left;
+}
+
+.app__text,
+.app__type {
+  transition: color 0.7s ease-out;
 }

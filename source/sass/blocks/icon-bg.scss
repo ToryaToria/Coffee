@@ -1,0 +1,10 @@
+.icon-bg {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 8px;
+
+  &::after {
+    @include bg-img;
+  }
+}

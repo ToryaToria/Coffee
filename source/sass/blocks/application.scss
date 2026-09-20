@@ -12,11 +12,10 @@
     gap: 100px;
   }
 
-    @include media-desktop {
-      flex-direction: row;
-  align-items: center;
-
-    }
+  @include media-desktop {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .application__title {
@@ -40,23 +39,41 @@
 
 .application__btn {
   box-sizing: border-box;
+  @include btn-reset;
+
   min-width: 200px;
   min-height: 64px;
 
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 3px;
+  justify-content: start;
+  gap: 8px;
 
   padding: 12px 20px;
 
-  @include btn-reset;
   border: 1px solid $color-line-invert;
   border-radius: $btn-radius;
 
-
   cursor: pointer;
   transition: background-color 0.7s ease-out;
+
+  &--apple::before {
+    @include bg-img(
+      $url: url("../../img/icons/app-store.svg"),
+      $mask-color: $color-bg-container-dark,
+      $width: 36px,
+      $height: 36px
+    );
+  }
+
+   &--google::before {
+    @include bg-img(
+      $url: url("../../img/icons/google.svg"),
+      $mask-color: $color-bg-container-dark,
+      $width: 36px,
+      $height: 36px
+    );
+  }
 
   &:focus {
     outline: none;
@@ -68,6 +85,15 @@
 
   &:hover {
     background-color: $color-bg-container;
+
+    .app__text,
+    .app__type {
+      color: $color-bg;
+    }
+  }
+
+  &:hover::before {
+    background-color: $color-bg;
   }
 
   &:active {
@@ -77,7 +103,7 @@
 
 .application__wrapper-img {
   width: 100%;
-    width: clamp(348px, 100%, 630px);
+  width: clamp(348px, 100%, 630px);
 
   height: auto;
   margin: 0 auto;

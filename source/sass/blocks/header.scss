@@ -94,10 +94,26 @@
   &--light {
     background-color: $color-accent;
 
-    &:hover {
-      img {
-        fill: red;
-      }
+    &::after {
+      @include bg-img(
+        $url: url("../../img/icons/sun.svg"),
+        $mask-color: $color-bg,
+        $width: 22px,
+        $height: 22px
+      );
+    }
+  }
+
+  &--dark {
+    background-color: transparent;
+
+    &::after {
+      @include bg-img(
+        $url: url("../../img/icons/moon.svg"),
+        $mask-color: $color-bg-container-dark,
+        $width: 22px,
+        $height: 22px
+      );
     }
   }
 
@@ -116,6 +132,11 @@
   &:active {
     background-color: $color-bg-container-60;
   }
+}
+
+.header__btn--dark:hover::after {
+      background-color: $color-bg;
+
 }
 
 .header__burger {
@@ -197,17 +218,26 @@
 .header__menu {
   display: none;
   text-decoration: none;
-  transition: background-color 0.7s ease-out, color 0.7s ease-out;
+  transition:
+    background-color 0.7s ease-out,
+    color 0.7s ease-out;
 
   @include media-desktop {
     display: block;
+    position: relative;
+
+    &::after {
+      @include hover-line;
+      transition:
+        background-color 0.7s ease-out,
+        transform 0.7s ease-out;
+      transform: scale(0);
+    }
 
     &--active {
-      position: relative;
-
       &::after {
         @include hover-line;
-       transition: background-color 0.7s ease-out;
+        transform: scale(1);
       }
     }
   }
@@ -225,8 +255,9 @@
     color: $color-accent;
   }
 
-  &:hover::before {
+  &:hover::after {
     background-color: $color-accent;
+    transform: scale(1);
   }
 
   &:active {
@@ -234,7 +265,11 @@
     color: $color-accent-50;
   }
 
-  &:active::before {
+  &:active::after {
     background-color: $color-accent-50;
   }
+}
+
+.header__menu--active:hover::after {
+  transform: scale(0);
 }

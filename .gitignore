@@ -25,3 +25,5 @@ readme
 *.njsproj
 *.sln
 *.sw?
+
+tmp.txt
