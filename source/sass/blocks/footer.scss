@@ -18,8 +18,10 @@
 
   @include media-desktop {
     padding: 100px;
+    gap: 135px;
+
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
   }
 }
 
@@ -103,6 +105,10 @@
 .footer__contacts {
   color: $color-invert;
   margin-bottom: 40px;
+
+    @include media-desktop {
+      margin-bottom: 36px;
+    }
 }
 
 .footer__contact {

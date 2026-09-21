@@ -66,7 +66,7 @@
     );
   }
 
-   &--google::before {
+  &--google::before {
     @include bg-img(
       $url: url("../../img/icons/google.svg"),
       $mask-color: $color-bg-container-dark,
@@ -107,6 +107,7 @@
 
   height: auto;
   margin: 0 auto;
+  flex-shrink: 0;
 
   img {
     display: block;

@@ -37,6 +37,9 @@
     @include list-reset;
 
     display: block;
+
+    padding-top: 16px;
+    padding-bottom: 20px;
   }
 }
 
@@ -117,6 +120,11 @@
     }
   }
 
+  @include media-tabl {
+    width: 36px;
+    height: 36px;
+  }
+
   &:focus {
     outline: none;
   }
@@ -135,8 +143,7 @@
 }
 
 .header__btn--dark:hover::after {
-      background-color: $color-bg;
-
+  background-color: $color-bg;
 }
 
 .header__burger {
@@ -273,7 +280,6 @@
 .header__menu--active:hover::after {
   transform: scale(0);
 }
-
 
 .header__icon-bg {
   display: flex;
