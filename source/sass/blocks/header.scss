@@ -273,3 +273,15 @@
 .header__menu--active:hover::after {
   transform: scale(0);
 }
+
+
+.header__icon-bg {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 8px;
+
+  &::after {
+    @include bg-img;
+  }
+}
