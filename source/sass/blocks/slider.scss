@@ -17,13 +17,24 @@
   text-align: center;
 
   margin-bottom: 40px;
+
+        @include media-tabl {
+        width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+        }
 }
 
 .slider__img {
   width: 348px;
   height: 348px;
 
-  margin-bottom: 13px; // Должно быть 16 !!!!!1
+  margin-bottom: 14px; // Должно быть 16 !!!!!1
+
+    @include media-tabl {
+    width: 480px;
+  height: 480px;
+    }
 }
 
 .slider__title {
@@ -51,6 +62,10 @@
     align-items: center;
     justify-content: space-between;
   }
+
+      @include media-tabl {
+          top: 47%;
+      }
 }
 
 .slider__nav {
