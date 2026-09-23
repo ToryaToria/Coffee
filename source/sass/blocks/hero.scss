@@ -35,16 +35,20 @@
 }
 
 .hero__btn {
-  @include btn($bg-color: $color-invert);
   box-sizing: border-box;
+
   min-width: 200px;
+  width: fit-content;
   height: 64px;
-  border: none;
+
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 
+  border-radius: $btn-radius;
+  background-color: $color-invert;
   padding: 20px 20px;
 
   cursor: pointer;
