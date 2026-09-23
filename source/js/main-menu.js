@@ -1,7 +1,6 @@
 const body = document.body;
-const btnMenu = document.querySelector('.btn-menu');
+const btnMenu = document.querySelector('#btn-menu');
 const nav = document.querySelector('.nav');
-const btnStart = document.querySelector('#js-button');
 
 const navLinks = document.querySelectorAll('.nav__link');
 
@@ -35,10 +34,6 @@ function closeMenu() {
   document.removeEventListener('keydown', onDocumentKeydown);
   body.removeEventListener('click', onDocumentClick);
 }
-
-btnStart.addEventListener('click', () => {
-  closeMenu();
-});
 
 navLinks.forEach((el) => {
   el.addEventListener('click', () => {

@@ -43,6 +43,17 @@
   }
 }
 
+.text-nav {
+   @include font($size: 32px, $line-height: 125%, $weight: 600);
+  text-decoration: none;
+
+    @include media-desktop {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+}
+
 .title-card {
   @include font($size: 24px, $line-height: 125%, $weight: 600);
 }
@@ -55,10 +66,5 @@
   @include font($size: 16px, $line-height: 150%, $weight: 600);
 }
 
-.text-nav {
-  @include font($size: 16px, $line-height: 150%, $weight: 600);
-
-  text-decoration: none;
-}
 
 

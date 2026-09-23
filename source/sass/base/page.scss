@@ -1,7 +1,10 @@
 .page {
   /*  для стики-футера */
   height: 100%;
-  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+  }
 }
 
 .page__body {

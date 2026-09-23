@@ -1,0 +1,44 @@
+.btn-menu {
+  box-sizing: border-box;
+  @include btn-reset;
+  @include font($size: 10px, $line-height: 140%, $weight: 600);
+  text-decoration: none;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+  gap: 4px;
+
+  border: 1px solid $color-line-invert;
+  border-radius: 100%;
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 2px;
+    background-color: $color-bg-container-dark;
+    border-radius: 6px;
+
+    transition: all 0.7s ease-out;
+  }
+
+  @include media-desktop {
+    display: none;
+  }
+}
+
+.btn-menu--closer::before {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.btn-menu--closer::after {
+  transform: translateY(-2px) rotate(-45deg);
+}
